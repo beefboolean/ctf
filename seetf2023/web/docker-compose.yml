@@ -1,0 +1,16 @@
+version: "3"
+services:
+  plantuml:
+    build:
+      context: .
+      dockerfile: Dockerfile.plantuml
+    environment:
+      - PLANTUML_SECURITY_PROFILE=ALLOWLIST
+      - ALLOW_PLANTUML_INCLUDE=true
+      - JAVA_OPTS=-Dplantuml.allowlist.url=https://plantuml.com -Dplantuml.allowlist.path=/usr/local/tomcat
+  chall:
+    build:
+      context: .
+      dockerfile: Dockerfile.chall
+    ports:
+      - "1337:1337"
